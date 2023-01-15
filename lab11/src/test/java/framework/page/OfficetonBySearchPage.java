@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class OffistonBySearchPage extends AbstractPage {
+public class OfficetonBySearchPage extends AbstractPage {
 
     @FindBy(xpath = "//div[@class='prod-card-list js-hover ']/div/div/div/div[@class='prod-txt-content prod-txt-content_mod']/div[@class='title-wrap']/a")
     WebElement firstItemCard;
@@ -18,14 +18,14 @@ public class OffistonBySearchPage extends AbstractPage {
     WebElement brandFilterInput;
 
 
-    public OffistonBySearchPage(WebDriver driver) {
+    public OfficetonBySearchPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         logger.info("Opened Search Page");
     }
 
 // //*[@id="comp_5abeda8fff194873b276b41781b77c4f"]/div/div[1]/div[4]/div[1]/div[2]/div[1]/input
-    public OffistonBySearchPage OpenFirstItemDetailsPage() {
+    public OfficetonBySearchPage OpenFirstItemDetailsPage() {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,250)");
@@ -83,7 +83,7 @@ public class OffistonBySearchPage extends AbstractPage {
 
 
     @Override
-    public OffistonBySearchPage waitForPageToLoad() {
+    public OfficetonBySearchPage waitForPageToLoad() {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOfElementLocated(
                         By.xpath("//div[@class='pt-wrap_i']")));

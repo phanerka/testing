@@ -6,10 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OffistonByProfilePage extends AbstractPage {
+public class OfficetonByProfilePage extends AbstractPage {
 
 
-    public OffistonByProfilePage(WebDriver driver) {
+    public OfficetonByProfilePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         logger.info("Opened Profile Page");
@@ -53,7 +53,7 @@ public class OffistonByProfilePage extends AbstractPage {
 */
 
     // form-message-FIELDS[MESSAGE]-contactFeedback
-    public OffistonByProfilePage openFeedbackForm() {
+    public OfficetonByProfilePage openFeedbackForm() {
 
         By itemCardByXpath = By.xpath("//div[@class='pt-feedback']/div/div[@class='btn-wrap']/a");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
@@ -63,7 +63,7 @@ public class OffistonByProfilePage extends AbstractPage {
         return this;
     }
 
-    public OffistonByProfilePage enterFeedback() {
+    public OfficetonByProfilePage enterFeedback() {
 
         By itemCardByXpath = By.xpath("//textarea[@id='form-message-FIELDS[MESSAGE]-contactFeedback']");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
@@ -75,7 +75,7 @@ public class OffistonByProfilePage extends AbstractPage {
 
 
     @Override
-    public OffistonByProfilePage waitForPageToLoad() {
+    public OfficetonByProfilePage waitForPageToLoad() {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOfElementLocated(
                         By.xpath("//div[@class='pt-feedback']/div/div[@class='btn-wrap']/a")));

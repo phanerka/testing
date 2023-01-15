@@ -562,3 +562,216 @@
 2023-01-15 21:37:30,892 INFO  [main] CheckMailingVerificatiion: true
 2023-01-15 21:37:49,366 INFO  [main] Opened HomePage
 2023-01-15 21:37:52,093 ERROR  [main] CheckMailingVerificatiion: NoSuchElementException
+2023-01-16 01:54:34,918 INFO  [main] Opened HomePage
+2023-01-16 01:54:36,837 INFO  [main] Searching тетрадь
+2023-01-16 01:54:37,921 INFO  [main] logged in
+2023-01-16 01:54:37,922 INFO  [main] Opened Search Page
+2023-01-16 01:54:42,918 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:54:42,920 INFO  [main] Opened Item Page
+2023-01-16 01:54:43,298 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:54:43,419 ERROR  [main] verifyAmountOfItemsInShoppingCart: NoSuchElementException
+2023-01-16 01:54:59,983 INFO  [main] Opened HomePage
+2023-01-16 01:55:01,654 INFO  [main] Searching тетрадь
+2023-01-16 01:55:02,523 INFO  [main] logged in
+2023-01-16 01:55:02,524 INFO  [main] Opened Search Page
+2023-01-16 01:55:06,470 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:55:06,472 INFO  [main] Opened Item Page
+2023-01-16 01:55:06,825 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:55:07,348 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:55:54,029 INFO  [main] Opened HomePage
+2023-01-16 01:55:55,606 INFO  [main] Searching тетрадь
+2023-01-16 01:55:56,419 INFO  [main] logged in
+2023-01-16 01:55:56,420 INFO  [main] Opened Search Page
+2023-01-16 01:56:00,439 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:00,440 INFO  [main] Opened Item Page
+2023-01-16 01:56:00,769 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:01,303 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:44,497 INFO  [main] Opened HomePage
+2023-01-16 01:56:46,078 INFO  [main] Searching тетрадь
+2023-01-16 01:56:46,969 INFO  [main] logged in
+2023-01-16 01:56:46,970 INFO  [main] Opened Search Page
+2023-01-16 01:56:50,822 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:50,824 INFO  [main] Opened Item Page
+2023-01-16 01:56:51,215 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:51,699 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:56:51,917 ERROR  [main] verifyAmountOfItemsInShoppingCart: NoSuchElementException
+2023-01-16 01:57:10,594 INFO  [main] Opened HomePage
+2023-01-16 01:57:12,246 INFO  [main] Searching тетрадь
+2023-01-16 01:57:13,189 INFO  [main] logged in
+2023-01-16 01:57:13,190 INFO  [main] Opened Search Page
+2023-01-16 01:57:16,815 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:57:16,816 INFO  [main] Opened Item Page
+2023-01-16 01:57:17,262 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:57:17,840 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:57:18,457 ERROR  [main] verifyAmountOfItemsInShoppingCart: NoSuchElementException
+2023-01-16 01:57:29,132 INFO  [main] Opened HomePage
+2023-01-16 01:57:30,636 INFO  [main] Searching !!!
+2023-01-16 01:57:31,835 INFO  [main] logged in
+2023-01-16 01:57:31,836 INFO  [main] Opened Search Page
+2023-01-16 01:57:34,113 ERROR  [main] checkIfCommentIsSent: NoSuchElementException
+2023-01-16 01:57:43,795 INFO  [main] Opened HomePage
+2023-01-16 01:57:46,641 ERROR  [main] CheckMailingVerificatiion: NoSuchElementException
+2023-01-16 01:57:59,307 INFO  [main] Opened HomePage
+2023-01-16 01:58:01,187 INFO  [main] Searching тетрадь
+2023-01-16 01:58:02,016 INFO  [main] logged in
+2023-01-16 01:58:02,017 INFO  [main] Opened Search Page
+2023-01-16 01:58:05,712 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:58:05,713 INFO  [main] Opened Item Page
+2023-01-16 01:58:06,064 INFO  [main] opened Shopping Cart Page
+2023-01-16 01:58:06,648 ERROR  [main] verifyAmountOfItemsInShoppingCart: NoSuchElementException
+2023-01-16 01:58:22,524 INFO  [main] Opened HomePage
+2023-01-16 01:58:24,394 INFO  [main] loginIntoAccount: valdaitsevv@mail.ru / fybnjc2001
+2023-01-16 01:58:25,727 INFO  [main] logged in
+2023-01-16 01:59:15,414 INFO  [main] Opened HomePage
+2023-01-16 01:59:17,291 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 01:59:18,840 INFO  [main] logged in
+2023-01-16 01:59:22,473 INFO  [main] opened Profile Page
+2023-01-16 01:59:36,372 INFO  [main] Opened HomePage
+2023-01-16 01:59:38,049 INFO  [main] Searching тетрадь
+2023-01-16 01:59:38,968 INFO  [main] logged in
+2023-01-16 01:59:39,172 INFO  [main] Opened Search Page
+2023-01-16 01:59:42,200 INFO  [main] checking Brand Filer...
+2023-01-16 01:59:42,271 INFO  [main] 
+2023-01-16 01:59:42,308 INFO  [main] ArtSpace (3)
+2023-01-16 01:59:42,336 INFO  [main] 
+2023-01-16 01:59:42,356 INFO  [main] 
+2023-01-16 01:59:42,382 INFO  [main] 
+2023-01-16 01:59:42,401 INFO  [main] 
+2023-01-16 01:59:42,422 INFO  [main] 
+2023-01-16 01:59:42,442 INFO  [main] 
+2023-01-16 01:59:42,463 INFO  [main] OfficeSpace (1)
+2023-01-16 01:59:42,489 INFO  [main] Panta Plast (5)
+2023-01-16 01:59:42,511 INFO  [main] 
+2023-01-16 01:59:42,531 INFO  [main] 
+2023-01-16 01:59:42,549 INFO  [main] 
+2023-01-16 01:59:42,569 INFO  [main] 
+2023-01-16 01:59:42,589 INFO  [main] 
+2023-01-16 01:59:42,610 INFO  [main] 
+2023-01-16 01:59:42,631 INFO  [main] 
+2023-01-16 01:59:42,650 INFO  [main] 
+2023-01-16 01:59:42,669 INFO  [main] 
+2023-01-16 02:00:07,512 INFO  [main] Opened HomePage
+2023-01-16 02:00:09,566 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:00:10,960 INFO  [main] logged in
+2023-01-16 02:00:10,961 INFO  [main] Searching тетрадь
+2023-01-16 02:02:33,188 INFO  [main] Opened HomePage
+2023-01-16 02:02:35,914 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:02:37,770 INFO  [main] logged in
+2023-01-16 02:02:37,771 INFO  [main] Searching тетрадь
+2023-01-16 02:03:17,775 INFO  [main] Opened HomePage
+2023-01-16 02:03:19,602 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:03:21,703 INFO  [main] logged in
+2023-01-16 02:03:21,703 INFO  [main] Searching тетрадь
+2023-01-16 02:03:23,986 INFO  [main] logged in
+2023-01-16 02:03:23,988 INFO  [main] Opened Search Page
+2023-01-16 02:03:28,775 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:03:28,786 INFO  [main] Opened Item Page
+2023-01-16 02:03:31,632 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:07:03,283 INFO  [main] Opened HomePage
+2023-01-16 02:07:05,292 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:07:06,455 INFO  [main] logged in
+2023-01-16 02:07:06,456 INFO  [main] Searching тетрадь
+2023-01-16 02:07:22,115 INFO  [main] Opened HomePage
+2023-01-16 02:07:23,991 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:07:25,409 INFO  [main] logged in
+2023-01-16 02:07:25,409 INFO  [main] Searching тетрадь
+2023-01-16 02:07:45,591 INFO  [main] Opened HomePage
+2023-01-16 02:07:47,174 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:07:48,478 INFO  [main] logged in
+2023-01-16 02:07:48,479 INFO  [main] Searching тетрадь
+2023-01-16 02:08:04,731 INFO  [main] Opened HomePage
+2023-01-16 02:08:06,542 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:08:07,731 INFO  [main] logged in
+2023-01-16 02:08:07,731 INFO  [main] Searching тетрадь
+2023-01-16 02:08:09,361 INFO  [main] logged in
+2023-01-16 02:08:09,362 INFO  [main] Opened Search Page
+2023-01-16 02:08:13,025 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:08:13,026 INFO  [main] Opened Item Page
+2023-01-16 02:08:14,459 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:08:38,705 INFO  [main] Opened HomePage
+2023-01-16 02:08:40,494 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:08:41,846 INFO  [main] logged in
+2023-01-16 02:08:41,846 INFO  [main] Searching тетрадь
+2023-01-16 02:08:43,412 INFO  [main] logged in
+2023-01-16 02:08:43,413 INFO  [main] Opened Search Page
+2023-01-16 02:08:47,358 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:08:47,359 INFO  [main] Opened Item Page
+2023-01-16 02:08:48,659 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:10:48,906 INFO  [main] Opened HomePage
+2023-01-16 02:10:52,627 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:10:54,429 INFO  [main] logged in
+2023-01-16 02:10:54,430 INFO  [main] Searching тетрадь
+2023-01-16 02:10:57,252 INFO  [main] logged in
+2023-01-16 02:10:57,321 INFO  [main] Opened Search Page
+2023-01-16 02:11:00,899 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:11:00,973 INFO  [main] Opened Item Page
+2023-01-16 02:11:01,389 INFO  [main] opened Item Review Tab
+2023-01-16 02:11:17,028 INFO  [main] Opened HomePage
+2023-01-16 02:11:18,635 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:11:19,953 INFO  [main] logged in
+2023-01-16 02:11:19,954 INFO  [main] Searching тетрадь
+2023-01-16 02:11:34,599 INFO  [main] Opened HomePage
+2023-01-16 02:11:37,638 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:11:41,338 INFO  [main] logged in
+2023-01-16 02:11:41,339 INFO  [main] Searching тетрадь
+2023-01-16 02:12:22,182 INFO  [main] Opened HomePage
+2023-01-16 02:12:23,738 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:12:25,207 INFO  [main] logged in
+2023-01-16 02:12:25,207 INFO  [main] Searching тетрадь
+2023-01-16 02:12:37,334 INFO  [main] Opened HomePage
+2023-01-16 02:12:38,965 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:12:40,448 INFO  [main] logged in
+2023-01-16 02:12:40,448 INFO  [main] Searching тетрадь
+2023-01-16 02:14:05,891 INFO  [main] Opened HomePage
+2023-01-16 02:14:07,416 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:14:08,529 INFO  [main] logged in
+2023-01-16 02:14:08,529 INFO  [main] Searching тетрадь
+2023-01-16 02:14:10,007 INFO  [main] logged in
+2023-01-16 02:14:10,141 INFO  [main] Opened Search Page
+2023-01-16 02:14:29,770 INFO  [main] Opened HomePage
+2023-01-16 02:14:31,382 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:14:32,546 INFO  [main] logged in
+2023-01-16 02:14:32,546 INFO  [main] Searching тетрадь
+2023-01-16 02:14:33,838 INFO  [main] logged in
+2023-01-16 02:14:33,864 INFO  [main] Opened Search Page
+2023-01-16 02:14:37,744 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:14:37,768 INFO  [main] Opened Item Page
+2023-01-16 02:15:01,921 INFO  [main] Opened HomePage
+2023-01-16 02:15:03,342 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:15:04,752 INFO  [main] logged in
+2023-01-16 02:15:08,747 INFO  [main] opened Profile Page
+2023-01-16 02:15:33,336 INFO  [main] Opened HomePage
+2023-01-16 02:15:36,484 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:15:37,792 INFO  [main] logged in
+2023-01-16 02:15:39,916 INFO  [main] opened Profile Page
+2023-01-16 02:15:40,065 INFO  [main] Opened Profile Page
+2023-01-16 02:15:40,287 INFO  [main] opened Feedback Form
+2023-01-16 02:15:41,010 INFO  [main] Wrote smth to feedback
+2023-01-16 02:15:52,464 INFO  [main] Opened HomePage
+2023-01-16 02:15:54,080 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:15:55,429 INFO  [main] logged in
+2023-01-16 02:15:55,430 INFO  [main] Searching тетрадь
+2023-01-16 02:16:11,773 INFO  [main] Opened HomePage
+2023-01-16 02:16:11,779 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:16:54,780 INFO  [main] Opened HomePage
+2023-01-16 02:16:56,330 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:16:57,363 INFO  [main] logged in
+2023-01-16 02:16:57,363 INFO  [main] Searching тетрадь
+2023-01-16 02:18:01,089 INFO  [main] Opened HomePage
+2023-01-16 02:18:02,621 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:18:03,338 INFO  [main] logged in
+2023-01-16 02:18:03,339 INFO  [main] Searching тетрадь
+2023-01-16 02:18:42,473 INFO  [main] Opened HomePage
+2023-01-16 02:18:44,039 INFO  [main] Searching тетрадь
+2023-01-16 02:18:44,459 INFO  [main] logged in
+2023-01-16 02:18:44,461 INFO  [main] Opened Search Page
+2023-01-16 02:18:48,086 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:18:48,087 INFO  [main] Opened Item Page
+2023-01-16 02:18:48,459 INFO  [main] opened Shopping Cart Page
+2023-01-16 02:18:49,049 ERROR  [main] verifyAmountOfItemsInShoppingCart: NoSuchElementException
+2023-01-16 02:19:01,114 INFO  [main] Opened HomePage
+2023-01-16 02:19:02,598 INFO  [main] loginIntoAccount: ani1901@list.ru / fybnjc2001
+2023-01-16 02:19:03,786 INFO  [main] logged in
+2023-01-16 02:19:03,786 INFO  [main] Searching тетрадь
+2023-01-16 02:19:05,046 INFO  [main] logged in
+2023-01-16 02:19:05,048 INFO  [main] Opened Search Page

@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class OffistonByItemPage extends AbstractPage {
+public class OfficetonByItemPage extends AbstractPage {
 
-    public OffistonByItemPage(WebDriver driver) {
+    public OfficetonByItemPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         logger.info("Opened Item Page");
@@ -30,14 +30,14 @@ public class OffistonByItemPage extends AbstractPage {
 
     // a href="#prod-tab-review" - switch to this tab
     // textarea class="comment-textarea"
-    public OffistonByItemPage addItemReview(String comment) {
+    public OfficetonByItemPage addItemReview(String comment) {
 
-        By shoppingCartButtonByXpath = By.xpath("//*[@class=\"item cabinet hint-cabinet\"]/div/a");
+        By shoppingCartButtonByXpath = By.xpath("//a[contains(@href, '#prod-tab-review')]");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(shoppingCartButtonByXpath)).click();
         //shoppingCartButton.click();
-        logger.info("opened Shopping Cart Page");
+        logger.info("opened Item Review Tab");
         return this;
     }
 
@@ -51,7 +51,7 @@ public class OffistonByItemPage extends AbstractPage {
 
         // input[@class='count-control__input js-add-one-box-input']
     // button[@class='btn btn-success btn-full-w js-orderButton']
-    public OffistonByItemPage addItemsToShoppingCart(int quantity) {
+    public OfficetonByItemPage addItemsToShoppingCart(int quantity) {
 
         amountOfItemsToAddToCartInput.clear();
         amountOfItemsToAddToCartInput.sendKeys(Integer.toString(quantity));
@@ -83,7 +83,7 @@ public class OffistonByItemPage extends AbstractPage {
     // checkIfThereIsCorrectAmoutOfItemsInShoppingCart
 
     @Override
-    public OffistonByItemPage waitForPageToLoad() {
+    public OfficetonByItemPage waitForPageToLoad() {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOfElementLocated(
                         By.xpath("//button[contains(@class, 'btn btn-success btn-full-w js_orderButton')]")));

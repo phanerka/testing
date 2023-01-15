@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OffistonByHomePage extends AbstractPage {
+public class OfficetonByHomePage extends AbstractPage {
 
     @FindBy(xpath = "//ul[@id='goods_block_books_1']/li[@class='listatic li_1']")
     WebElement firstGoodOnTheHomePage;
@@ -50,24 +50,23 @@ public class OffistonByHomePage extends AbstractPage {
     WebElement subscriptionSubmitButton;
 
 
-    public OffistonByHomePage(WebDriver driver) {
+    public OfficetonByHomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         logger.info("Opened HomePage");
     }
 
-    public OffistonByHomePage waitForHomePageToLoad() {
+    public OfficetonByHomePage waitForHomePageToLoad() {
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
         return this;
     }
 
     // input class: 'search-input input'
-    public OffistonByHomePage searchBy(String searchQuery) {
+    public OfficetonByHomePage searchBy(String searchQuery) {
         logger.info("Searching " + searchQuery);
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"global-v2\"]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input")));
-        searchInput.click();
         //waitForElementLocatedBy(driver, By.xpath("//input[@class='search-input input']"));
         searchInput.sendKeys(searchQuery);
         searchInput.sendKeys(Keys.ENTER);
@@ -85,7 +84,7 @@ public class OffistonByHomePage extends AbstractPage {
     }
 
 
-    public OffistonByHomePage loginIntoAccount(User user) {
+    public OfficetonByHomePage loginIntoAccount(User user) {
         logger.info("loginIntoAccount: " + user.getUsername() + " / " + user.getPassword());
         openLoginFormButton.click();
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -102,7 +101,7 @@ public class OffistonByHomePage extends AbstractPage {
 
     // cabinet__enter
 
-    public OffistonByHomePage openProfilePage() {
+    public OfficetonByHomePage openProfilePage() {
         By shoppingCartButtonByXpath = By.xpath("//*[@class=\"item cabinet hint-cabinet\"]/div/a");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -112,7 +111,7 @@ public class OffistonByHomePage extends AbstractPage {
         return this;
     }
 
-    public OffistonByHomePage openShoppingCartPage() {
+    public OfficetonByHomePage openShoppingCartPage() {
         By shoppingCartButtonByXpath = By.xpath("//*[@id=\"small_basket\"]/div/a");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -122,13 +121,13 @@ public class OffistonByHomePage extends AbstractPage {
         return this;
     }
 
-    public OffistonByHomePage openPage() {
+    public OfficetonByHomePage openPage() {
         driver.get(HOMEPAGE_URL);
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
         return this;
     }
 
-    public OffistonByHomePage SubscribeByEmail(String email) {
+    public OfficetonByHomePage subscribeByEmail(String email) {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
@@ -137,7 +136,7 @@ public class OffistonByHomePage extends AbstractPage {
         return this;
     }
 
-    public Boolean CheckMailingVerificatiion() {
+    public Boolean checkMailingVerification() {
         try {
 
             driver.findElement(By.xpath("//div[@class='subscription__error']"));
@@ -151,7 +150,7 @@ public class OffistonByHomePage extends AbstractPage {
 
 
 
-    public OffistonByHomePage openFirstGoodPage() {
+    public OfficetonByHomePage openFirstGoodPage() {
         waitForElementLocatedBy(driver, By.xpath("//ul[@id='goods_block_books_1']/li[@class='listatic li_1']"));
         firstGoodOnTheHomePage.click();
         logger.info("openFirstGoodPage");
