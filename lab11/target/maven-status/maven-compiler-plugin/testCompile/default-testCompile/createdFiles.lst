@@ -1,0 +1,17 @@
+secxndary_framework\page\OzBySearchResultsPage.class
+secxndary_framework\page\AbstractPage.class
+secxndary_framework\model\User.class
+secxndary_framework\creator\AddressCreator.class
+secxndary_framework\utils\TestDataReader.class
+secxndary_framework\page\OzByCartPage.class
+secxndary_framework\creator\CommentCreator.class
+secxndary_framework\page\OzByHomePage.class
+secxndary_framework\utils\TestListener.class
+secxndary_framework\model\Comment.class
+secxndary_framework\model\Address.class
+secxndary_framework\page\OzByFeedbackPage.class
+secxndary_framework\test\CommonConditions.class
+secxndary_framework\driver\DriverSingleton.class
+secxndary_framework\page\OzByGoodsPage.class
+secxndary_framework\test\OzByTest.class
+secxndary_framework\creator\UserCreator.class

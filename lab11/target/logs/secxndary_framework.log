@@ -1,0 +1,15 @@
+2022-12-21 19:24:22,200 INFO  [main] Opened HomePage
+2022-12-21 19:24:23,090 INFO  [main] loginIntoAccount: valdaitsevv@mail.ru / 4cLMSR
+2022-12-21 19:24:26,262 INFO  [main] openCartPage
+2022-12-21 19:24:26,265 INFO  [main] Opened CartPage
+2022-12-21 19:24:27,144 INFO  [main] chooseCourierDeliveryOption
+2022-12-21 19:24:29,594 INFO  [main] addDeliveryAddress: street: dimitriadi anton, house: lox 123
+2022-12-21 19:24:29,606 INFO  [main] checkIfAddressHasBeenAdded: true
+2022-12-21 19:24:30,782 INFO  [main] Opened HomePage
+2022-12-21 19:24:31,504 INFO  [main] loginIntoAccount: valdaitsevv@mail.ru / 4cLMSR
+2022-12-21 19:24:34,494 INFO  [main] openFirstGoodPage
+2022-12-21 19:24:34,496 INFO  [main] Opened GoodsPage
+2022-12-21 19:24:35,836 INFO  [main] openCartPage: the product is in the cart already.
+2022-12-21 19:24:35,837 INFO  [main] Opened CartPage
+2022-12-21 19:24:37,101 INFO  [main] enterNumberOfGoods: 358
+2022-12-21 19:24:37,115 ERROR  [main] checkIfNumberOfGoodsIsSent: NoSuchElementException
