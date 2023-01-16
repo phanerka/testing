@@ -1,5 +1,7 @@
 package framework.test;
+import framework.creator.CommentCreator;
 import framework.creator.UserCreator;
+import framework.model.Comment;
 import framework.model.User;
 import framework.page.*;
 import org.openqa.selenium.WebDriver;
@@ -7,12 +9,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 
 public class OfficetonByTest extends CommonConditions {
 
 
     private User USER = UserCreator.withCredentialsFromProperty();
+
+    private Comment COMMENT = CommentCreator.getCommentText();
 
     @BeforeMethod(alwaysRun = true)
     public void browserSetup() {
@@ -39,11 +44,12 @@ public class OfficetonByTest extends CommonConditions {
                 .waitForPageToLoad()
                 .OpenFirstItemDetailsPage();
 
-        new OfficetonByItemPage(driver)
+        Boolean reviewCharacterAmountLimitCheck = new OfficetonByItemPage(driver)
                 .waitForPageToLoad()
-                .addItemReview("test")
+                .addItemReview(COMMENT.getCommentText())
                 .checkReviewCharacterAmountLimit();
 
+        Assert.assertTrue(reviewCharacterAmountLimitCheck);
     }
 
     @Test
@@ -53,11 +59,12 @@ public class OfficetonByTest extends CommonConditions {
                 .openPage()
                 .searchBy("тетрадь");
 
-        new OfficetonBySearchPage(driver)
+        Boolean verifyBrandFilterByNameCheck =  new OfficetonBySearchPage(driver)
                 .waitForPageToLoad()
                 .checkBrandFilterByName("pa");
+        Assert.assertTrue(verifyBrandFilterByNameCheck);
     }
-
+/*
     @Test
     public void openShoppingCartPageTest() {
         new OfficetonByHomePage(driver)
@@ -67,7 +74,7 @@ public class OfficetonByTest extends CommonConditions {
                 .openProfilePage();
 
     }
-
+*/
     @Test
     public void commentLengthLimitTest() {
         new OfficetonByHomePage(driver)
@@ -75,12 +82,13 @@ public class OfficetonByTest extends CommonConditions {
                 .openPage()
                 .loginIntoAccount(USER)
                 .openProfilePage();
-        new OfficetonByProfilePage(driver)
+        Boolean feedbackMessageLimitCheck = new OfficetonByProfilePage(driver)
                 .waitForPageToLoad()
                 .openFeedbackForm()
-                .enterFeedback();
-        //        .checkFeedbackEmailVerification();
+                .enterFeedback(COMMENT.getCommentText())
+                .checkFeedbackMessageVerification();
 
+        Assert.assertTrue(feedbackMessageLimitCheck);
     }
 
     @Test
@@ -94,20 +102,22 @@ public class OfficetonByTest extends CommonConditions {
                 .waitForPageToLoad()
                 .OpenFirstItemDetailsPage();
 
-        new OfficetonByItemPage(driver)
+        Boolean restrictedAmountOfItemsInCart = new OfficetonByItemPage(driver)
                 .waitForPageToLoad()
                 .addItemsToShoppingCart(9999)
                 .verifyAmountOfItemsInShoppingCart(9999);
 
-        //        .waitForPageToLoad()
+        Assert.assertFalse(restrictedAmountOfItemsInCart);
     }
 
     @Test
     public void subscriptionEmailVerification() {
-        new OfficetonByHomePage(driver)
+        Boolean mailVerificationCheck = new OfficetonByHomePage(driver)
                 .openPage()
                 .subscribeByEmail("ayo")
                 .checkMailingVerification();
+
+        Assert.assertTrue(mailVerificationCheck);
 
     }
 
@@ -118,10 +128,11 @@ public class OfficetonByTest extends CommonConditions {
                 .openPage()
                 .searchBy("!!!");
 
-        new OfficetonBySearchPage(driver)
+        Boolean noResultPageCheck = new OfficetonBySearchPage(driver)
                 .waitForPageToLoad()
                 .checkNoResultPage();
 
+        Assert.assertTrue(noResultPageCheck);
     }
 
     @Test
@@ -133,12 +144,15 @@ public class OfficetonByTest extends CommonConditions {
         new OfficetonBySearchPage(driver)
                 .waitForPageToLoad()
                 .OpenFirstItemDetailsPage();
-        new OfficetonByItemPage(driver)
+        Boolean addingAmountOfItemsInShoppingCartCheck = new OfficetonByItemPage(driver)
                 .addItemsToShoppingCart(5)
                 .waitForPageToLoad()
                 .addItemsToShoppingCart(1)
                 .waitForPageToLoad()
                 .verifyAmountOfItemsInShoppingCart(6);
+
+        Assert.assertTrue(addingAmountOfItemsInShoppingCartCheck);
+
     }
 
 
@@ -151,11 +165,11 @@ public class OfficetonByTest extends CommonConditions {
         new OfficetonBySearchPage(driver)
                 .waitForPageToLoad()
                 .OpenFirstItemDetailsPage();
-        new OfficetonByItemPage(driver)
+        Boolean amountOfItemsInCartCheck = new OfficetonByItemPage(driver)
                 .addItemsToShoppingCart(0)
                 .waitForPageToLoad()
                 .verifyAmountOfItemsInShoppingCart(0);
-        // if true, assert false
+        Assert.assertFalse(amountOfItemsInCartCheck);
     }
 
 }

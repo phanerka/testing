@@ -1,9 +1,6 @@
 package framework.page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,10 +29,30 @@ public class OfficetonByItemPage extends AbstractPage {
     // textarea class="comment-textarea"
     public OfficetonByItemPage addItemReview(String comment) {
 
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,500)");
+
         By shoppingCartButtonByXpath = By.xpath("//a[contains(@href, '#prod-tab-review')]");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
+
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(shoppingCartButtonByXpath)).click();
+
+
+        try {
+            WebDriverWait wait2 = new WebDriverWait(driver, 30);
+            wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//textarea[@id='form-message-FIELDS[MESSAGE]-form_reviews']"))).sendKeys(comment);
+        }
+        catch(org.openqa.selenium.StaleElementReferenceException ex)
+        {
+            WebElement addReviewInput2 = driver.findElement(By.xpath("//textarea[@id='form-message-FIELDS[MESSAGE]-form_reviews']"));
+            addReviewInput2.sendKeys(comment);
+            addReviewInput2.sendKeys(Keys.ENTER);
+        }
+
+
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@id='form-message-FIELDS[MESSAGE]-form_reviews']"))).sendKeys(comment);
+
         //shoppingCartButton.click();
         logger.info("opened Item Review Tab");
         return this;
@@ -46,7 +63,7 @@ public class OfficetonByItemPage extends AbstractPage {
     public Boolean checkReviewCharacterAmountLimit() {
         // doing implicit because I can't be sure *what* affects amount of characters being limited
         driver.manage().timeouts().implicitlyWait(300, TimeUnit.MILLISECONDS);
-        return (addReviewInput.getText().length() > 500);
+        return (addReviewInput.getAttribute("value").length() <= 500);
     }
 
         // input[@class='count-control__input js-add-one-box-input']
@@ -71,7 +88,7 @@ public class OfficetonByItemPage extends AbstractPage {
         try {
             // //span[@class='total-count-txt'][contains(text(), '9999')]
             waitForElementLocatedBy(driver, By.xpath("//span[@class='total-count-txt'][contains(text(), '" + amount + "')]"));
-            driver.findElement(By.xpath("//span[@class='total-count-txt'][text()='\" + amount + \"']"));
+            driver.findElement(By.xpath("//span[@class='total-count-txt'][contains(text(),'" + amount + "')]"));
             logger.info("verifyAmountOfItemsInShoppingCart: true");
             return true;
         } catch (NoSuchElementException e) {

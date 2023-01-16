@@ -6,6 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.xml.bind.annotation.XmlInlineBinaryData;
+import java.util.concurrent.TimeUnit;
+
 public class OfficetonByProfilePage extends AbstractPage {
 
 
@@ -14,6 +17,10 @@ public class OfficetonByProfilePage extends AbstractPage {
         PageFactory.initElements(driver, this);
         logger.info("Opened Profile Page");
     }
+
+    @FindBy(xpath = "//textarea[@id='form-message-FIELDS[MESSAGE]-contactFeedback']")
+    WebElement feedbackMessageInput;
+
 
     // a data-target="#modalcontactFeedback"
     //@FindBy(xpath = "//ul[@id='goods_block_books_1']/li[@class='listatic li_1']")
@@ -63,13 +70,19 @@ public class OfficetonByProfilePage extends AbstractPage {
         return this;
     }
 
-    public OfficetonByProfilePage enterFeedback() {
+    // checkFeedbackEmailVerification
+
+    public Boolean checkFeedbackMessageVerification() {
+            return (feedbackMessageInput.getAttribute("value").length() <= 500);
+    }
+
+    public OfficetonByProfilePage enterFeedback(String feedbackMessage) {
 
         By itemCardByXpath = By.xpath("//textarea[@id='form-message-FIELDS[MESSAGE]-contactFeedback']");
         //waitForElementLocatedBy(driver, By.xpath("//*[@id=\"small_basket\"]/div/a"));
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.elementToBeClickable(itemCardByXpath)).sendKeys("joke");
-        logger.info("Wrote smth to feedback");
+        wait.until(ExpectedConditions.elementToBeClickable(itemCardByXpath)).sendKeys(feedbackMessage);
+        logger.info("Wrote stuff to feedback form");
         return this;
     }
 

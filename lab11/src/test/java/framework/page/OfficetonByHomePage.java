@@ -22,10 +22,12 @@ public class OfficetonByHomePage extends AbstractPage {
     WebElement searchInput;
 
     // a href="/search/...."
+    // //html/body/div[3]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input
     // //*[@id="global-v2"]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input
     // form[@class='search-form']/fieldset/input[@name='q']
     // /html/body/div[3]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input
-    @FindBy(xpath="/html/body/div[3]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input")
+    @FindBy(xpath="//div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']")
+    ////div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']
     WebElement submitSearchButton;
 
     // login
@@ -64,12 +66,26 @@ public class OfficetonByHomePage extends AbstractPage {
     // input class: 'search-input input'
     public OfficetonByHomePage searchBy(String searchQuery) {
         logger.info("Searching " + searchQuery);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"global-v2\"]/div/div/div/header/div[3]/div[2]/div/div/div/div[3]/div/div[1]/div/form/fieldset/input")));
+        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        //WebElement element = wait.until(
+        //        ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']")));
         //waitForElementLocatedBy(driver, By.xpath("//input[@class='search-input input']"));
-        searchInput.sendKeys(searchQuery);
-        searchInput.sendKeys(Keys.ENTER);
+        //WebElement searchInput2 = driver.findElement(By.xpath("//div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']"));
+
+
+        // thanks stackoverflow
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']"))).sendKeys(searchQuery);
+            searchInput.sendKeys(Keys.ENTER);
+        }
+        catch(org.openqa.selenium.StaleElementReferenceException ex)
+        {
+            WebElement searchInput2 = driver.findElement(By.xpath("//div[@class='item search hint-search 2  js-fade-menu__toggler']/div/form/fieldset/input[@class='search-input input']"));
+            searchInput2.sendKeys(searchQuery);
+            searchInput2.sendKeys(Keys.ENTER);
+        }
+
         //submitSearchButton.click();
         /*
         logger.info("loginIntoAccount: " + user.getUsername() + " / " + user.getPassword());
@@ -139,11 +155,13 @@ public class OfficetonByHomePage extends AbstractPage {
     public Boolean checkMailingVerification() {
         try {
 
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='subscription__error']")));
             driver.findElement(By.xpath("//div[@class='subscription__error']"));
             logger.info("CheckMailingVerificatiion: true");
             return true;
         } catch (NoSuchElementException e) {
-            logger.error("CheckMailingVerificatiion: NoSuchElementException");
+            logger.error("CheckMailingVerificatiion: NoSuchElementException" + e);
             return false;
         }
     }

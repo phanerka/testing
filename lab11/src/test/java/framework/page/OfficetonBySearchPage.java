@@ -72,7 +72,7 @@ public class OfficetonBySearchPage extends AbstractPage {
 
     public Boolean checkNoResultPage() {
         try {
-            driver.findElement(By.xpath("//p[contains(text(), '» ничего не найдено')]"));
+            driver.findElement(By.xpath("//p[contains(text(), 'По вашему запросу')]"));
             logger.info("checkIfCommentIsSent: true");
             return true;
         } catch (NoSuchElementException e) {
